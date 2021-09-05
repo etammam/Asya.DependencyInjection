@@ -6,12 +6,15 @@
     <Authors>Eslam M. Tammam</Authors>
     <Company>Asya Code</Company>
     <Product>Asya Framework</Product>
-    <Description>a ligtwight dependency injection scanner using attribute scanner</Description>
-    <RepositoryType>Private</RepositoryType>
+    <Description>a lightweight dependency injection scanner using attribute scanner</Description>
+    <RepositoryType></RepositoryType>
     <PackageTags>DependencyInjection, AssemblyScanner</PackageTags>
     <PackageReleaseNotes>the initial release</PackageReleaseNotes>
     <PackageIcon>Asya Framework.png</PackageIcon>
     <PackageIconUrl />
+    <PackageLicenseFile>License.md</PackageLicenseFile>
+    <Copyright>Copyright (c) Asyacode 2021</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +24,10 @@
 
   <ItemGroup>
     <None Include="C:\Users\Eslam M. Tammam\Desktop\Asya Framework.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="License.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

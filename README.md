@@ -1,20 +1,41 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Asya Dependency Injection
+a lightweight dependency injection assembly scanner
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+you can simply inject your dependencies with a smart attribute decoration and let the package take of your DI registration for the 4 common injection methods (`Transient`, `Singleton`, `Scoped`, `Hosted`) as following 
+let's talk about the injection after 
+I have created a simple interface with a single method as `IExample.cs` and implementation as `ExampleManager.cs` as following 
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+`using Asya.DependencyInjection.Attributes;`
+`namespace Asya.DependencyInjection
+{
+    [Scoped]
+    public interface IExample
+    {
+        void Transaction();
+    }
+}`
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+and the implementation 
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+`using System;`
+`namespace Asya.DependencyInjection`
+`{`
+    `public class ExampleManager: IExample`
+    `{`
+        `public void Transaction()`
+        `{`
+            `throw new NotImplementedException();`
+        `}`
+    `}`
+`}`
+
+all you want is to mention the attribute as decoration on top of your interface or class you can use one of the following 
+
+[Scoped], [Singleton], [Transient], [Hosted]
+
+then in your startup class you can simple inject this with single method as 
+`service.ScanDependencies();` 
+which will scan all services around your internal assembly and register each depended on the decoration attribute
+**OR**
+you can analysis you code with register each using the `AddServiceOfType<TAttrubite>()`; as following 
+`AddServiceOfType<Singleton>();` `AddServiceOfType<Scoped>();` `AddServiceOfType<Transient>();` `AddServiceOfType<Hosted>();` which also will scan your assembly to get dependencies

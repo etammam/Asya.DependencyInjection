@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Asya.DependencyInjection.Attributes;
-using Asya.DependencyInjection.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Asya.DependencyInjection
+namespace Asya.DependencyInjection.Extensions
 {
     public static class ServiceCollectionExtensions
     {
