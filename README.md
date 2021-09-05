@@ -31,7 +31,7 @@ and the implementation
 
 all you want is to mention the attribute as decoration on top of your interface or class you can use one of the following 
 
-[Scoped], [Singleton], [Transient], [Hosted]
+`[Scoped]`, `[Singleton]`, `[Transient]`, `[Hosted]`
 
 then in your startup class you can simple inject this with single method as 
 `service.ScanDependencies();` 

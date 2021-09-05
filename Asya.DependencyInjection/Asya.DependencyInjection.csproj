@@ -7,7 +7,7 @@
     <Company>Asya Code</Company>
     <Product>Asya Framework</Product>
     <Description>a lightweight dependency injection scanner using attribute scanner</Description>
-    <RepositoryType></RepositoryType>
+    <RepositoryType>GIT</RepositoryType>
     <PackageTags>DependencyInjection, AssemblyScanner</PackageTags>
     <PackageReleaseNotes>the initial release</PackageReleaseNotes>
     <PackageIcon>Asya Framework.png</PackageIcon>
@@ -15,6 +15,9 @@
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <Copyright>Copyright (c) Asyacode 2021</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://dev.azure.com/etammam/asya</PackageProjectUrl>
+    <RepositoryUrl>https://dev.azure.com/etammam/Asya/_git/Asya.DependencyInjection</RepositoryUrl>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
